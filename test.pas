@@ -2,6 +2,8 @@
 
 procedure ImFill;
 begin
+  Window.Maximize;
+  
   var width_of_picture := Window.Width;
   var height_of_picture := Window.Height;
   //var source_pic_num:integer;
@@ -11,7 +13,7 @@ begin
   //if (source_pic_num > 0) and (source_pic_num < 6) then break;
   //end;
   
-  Window.Maximize;
+  
   
   while true do
   begin
@@ -19,7 +21,7 @@ begin
     
     var source_pic_num: integer := random(1, 5);
     var source_pic_name := 'img' + source_pic_num + '.jpg';
-    var source_pic := Picture.Create(pic_name);
+    var source_pic := Picture.Create(source_pic_name);
     var picture := Picture.Create(width_of_picture, height_of_picture);
     var (x, y) := (0, 0);
     
